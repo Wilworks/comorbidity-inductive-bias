@@ -1,0 +1,21 @@
+# Data — never commit patient data
+data/*.csv
+data/*.xlsx
+data/*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large model files
+*.pt
+*.pth
