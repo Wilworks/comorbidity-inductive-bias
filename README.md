@@ -117,5 +117,5 @@ For access to the dataset, please download it from Mendeley Data using the DOI: 
 ## Author
 
 Asumboya Wilfred Ayine
-BSc. Biomedical Engineering, University of Ghana
+BSc. Biomedical Engineering L300, University of Ghana
 Independent Research, 2026
