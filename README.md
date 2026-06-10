@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/1223727556.svg)](https://doi.org/10.5281/zenodo.20629273)
 # Comorbidity-Aware Inductive Biases for Multi-Label Clinical Prediction
 
 This repository contains the code, results, and analysis for an empirical
