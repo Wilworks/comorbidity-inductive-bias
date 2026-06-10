@@ -97,7 +97,7 @@ For access to the dataset, please download it from Mendeley Data using the DOI: 
 The MI dataset contains records of patients with acute myocardial infarction. The dataset includes 124 features encompassing demographics, history, admission vitals, and ECG findings.
 
 **Citation:**
-Golovenkin, S. E., Bac, J., Chervov, A., Mirkes, E. M., Orlova, Y., Barillot, E., Gorban, A., & Zinovyev, A. (2020). Trajectories, bifurcations, and pseudo-time in large clinical datasets: applications to myocardial infarction and diabetes data. GigaScience.
+Golovenkin SE, Shulman VA, Rossiev DA, Shesternya PA, Nikulina SY, Orlova YV, et al. Myocardial infarction complications [Dataset]. UCI Machine Learning Repository; 2020. doi:10.24432/C53P5M.
 
 For access to the dataset, please download it from the UCI Machine Learning Repository (ID: 579) and place the data file at `data/MI.data`.
 
