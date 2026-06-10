@@ -124,5 +124,5 @@ For access to the dataset, please download it from the UCI Machine Learning Repo
 ## Author
 
 Wilfred Ayine
-BSc. Biomedical Engineering L300, University of Ghana
-Independent Research, 2026
+University of Ghana
+Research, 2026
