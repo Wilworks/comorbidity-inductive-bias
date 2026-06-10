@@ -70,6 +70,8 @@ comorbidity-inductive-bias/
 3. Ensure datasets are present in the `data/` directory.
 4. Navigate to `notebooks/t2d/` or `notebooks/mi/` and run the experiment notebooks in any order.
 
+*Important Note on Environment:* All model training and experiments were originally conducted in **Google Colab**. Therefore, the data loading and result saving paths inside the `.ipynb` notebooks still point to Google Drive directories (e.g., `/content/drive/MyDrive/...`). If you intend to run these notebooks locally, you will need to update the file paths within the notebooks to point to your local `../../data/` and `../../results/` directories.
+
 ## Publication Figures
 
 *Note: The publication figures (e.g., the `.tif` line plots and heatmaps) are not statically hosted or generated in this repository. All figures were implemented and compiled natively via TikZ/PGFPlots directly within the LaTeX manuscript (`main.tex`) using the raw data aggregated in the `results/` folder.*
