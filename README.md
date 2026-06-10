@@ -63,18 +63,36 @@ comorbidity-inductive-bias/
 └── requirements.txt
 ```
 
-## How to Run
+## Reproducibility Guide
 
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Ensure datasets are present in the `data/` directory.
-4. Navigate to `notebooks/t2d/` or `notebooks/mi/` and run the experiment notebooks in any order.
+The codebase is designed to allow full reproduction of the 350 training runs.
 
-*Important Note on Environment:* All model training and experiments were originally conducted in **Google Colab**. Therefore, the data loading and result saving paths inside the `.ipynb` notebooks still point to Google Drive directories (e.g., `/content/drive/MyDrive/...`). If you intend to run these notebooks locally, you will need to update the file paths within the notebooks to point to your local `../../data/` and `../../results/` directories.
+### 1. Environment Setup
+Clone the repository and install the required dependencies:
+```bash
+git clone https://github.com/your-username/comorbidity-inductive-bias.git
+cd comorbidity-inductive-bias
+pip install -r requirements.txt
+```
 
-## Publication Figures
+### 2. Dataset Preparation
+Ensure both the T2D and MI datasets are downloaded and placed in the `data/` directory as described in the **Data** section below.
 
-*Note: The publication figures (e.g., the `.tif` line plots and heatmaps) are not statically hosted or generated in this repository. All figures were implemented and compiled natively via TikZ/PGFPlots directly within the LaTeX manuscript (`main.tex`) using the raw data aggregated in the `results/` folder.*
+### 3. Path Configuration (Colab vs. Local)
+All experiments were originally executed using **Google Colab**. Consequently, the data loading and result saving paths in the top cell of each notebook point to Google Drive directories (e.g., `BASE_DRIVE = '/content/drive/MyDrive/comorbidity_experiments/'`).
+
+- **To run in Google Colab:** Upload the `data/` directory to your Google Drive and ensure the `BASE_DRIVE` variable in the notebooks matches your Drive structure.
+- **To run locally:** Open each notebook and modify the file paths in the first cell to point to your local directories. For example:
+  - `DATA_PATH = '../../data/t2d_data.csv'`
+  - `BASE_DRIVE = '../../results/t2d/'`
+
+### 4. Running the Experiments
+Navigate to `notebooks/t2d/` or `notebooks/mi/`. You can run the experiment notebooks (e.g., `baseline.ipynb`, `crf.ipynb`) in any order. Executing all cells in a notebook will train the model across the predefined 7 seeds and 5 data fractions, automatically appending the evaluated metrics to the corresponding `master_results.json` file in your results directory.
+
+### 5. Reproducing the Final Paper Results (Figures)
+The final results, figures (e.g., line plots, heatmaps), and tables presented in the publication are generated natively via TikZ/PGFPlots directly within the LaTeX manuscript (`main.tex`). 
+
+The `results/` directory contains all the raw aggregate AUROC data in JSON format that the LaTeX manuscript relies upon. To reproduce the visual results exactly as they appear in the paper, you do not need to run an external Python analysis script; simply compile the manuscript source code using your preferred LaTeX distribution.
 
 ## Experimental Design
 
