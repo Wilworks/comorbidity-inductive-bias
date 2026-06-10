@@ -51,15 +51,15 @@ comorbidity-inductive-bias/
 │   │   ├── multiplicative.ipynb
 │   │   ├── crf.ipynb
 │   │   ├── residual_mlp.ipynb
-│   │   ├── combined_head.ipynb
-│   │   └── analysis.ipynb
+│   │   └── combined_head.ipynb
 │   └── mi/                  # MI experiments
 │       ├── baseline.ipynb
 │       ├── linear_additive.ipynb
 │       ├── multiplicative.ipynb
 │       └── crf.ipynb
-├── plots/                   # All generated figures
 ├── results/                 # Master results JSON per experiment
+│   ├── t2d/
+│   └── mi/
 └── requirements.txt
 ```
 
@@ -69,11 +69,14 @@ comorbidity-inductive-bias/
 2. Install dependencies: `pip install -r requirements.txt`
 3. Ensure datasets are present in the `data/` directory.
 4. Navigate to `notebooks/t2d/` or `notebooks/mi/` and run the experiment notebooks in any order.
-5. Run the `analysis.ipynb` notebook after all experiments are complete to generate plots.
+
+## Publication Figures
+
+*Note: The publication figures (e.g., the `.tif` line plots and heatmaps) are not statically hosted or generated in this repository. All figures were implemented and compiled natively via TikZ/PGFPlots directly within the LaTeX manuscript (`main.tex`) using the raw data aggregated in the `results/` folder.*
 
 ## Experimental Design
 
-- **Seeds:** Independent runs per condition (seeds 42, 123, 456, 789, 1337)
+- **Seeds:** 7 independent runs per condition (seeds 42, 123, 456, 789, 1337, 2024, 9999)
 - **Data fractions:** 100%, 80%, 60%, 40%, 20% of training set
 - **Evaluation:** Macro AUROC on fixed held-out test set
 
