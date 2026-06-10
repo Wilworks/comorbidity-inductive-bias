@@ -123,6 +123,6 @@ For access to the dataset, please download it from the UCI Machine Learning Repo
 
 ## Author
 
-Asumboya Wilfred Ayine
+Wilfred Ayine
 BSc. Biomedical Engineering L300, University of Ghana
 Independent Research, 2026
