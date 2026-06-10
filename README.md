@@ -114,7 +114,7 @@ Vamsi, Bandi; Bhattacharyya, Debnath (2021), “Micro and Macro vascular complic
 For access to the dataset, please download it from Mendeley Data using the DOI: [10.17632/dsjcb6pyd8.1](https://doi.org/10.17632/dsjcb6pyd8.1) and place the CSV file at `data/t2d_data.csv`.
 
 ### Myocardial Infarction Complications Dataset
-The MI dataset contains records of patients with acute myocardial infarction. The dataset includes 124 features encompassing demographics, history, admission vitals, and ECG findings.
+The MI dataset contains 1,700 records of patients with acute myocardial infarction. The official dataset includes 111 multivariate input features encompassing demographics, history, admission vitals, and ECG findings.
 
 **Citation:**
 Golovenkin SE, Shulman VA, Rossiev DA, Shesternya PA, Nikulina SY, Orlova YV, et al. Myocardial infarction complications [Dataset]. UCI Machine Learning Repository; 2020. doi:10.24432/C53P5M.
