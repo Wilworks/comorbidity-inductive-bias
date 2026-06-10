@@ -9,7 +9,7 @@ across two clinical domains: Type 2 Diabetes complications and Myocardial Infarc
 Multi-label clinical prediction models routinely treat correlated outcomes as
 independent. This work investigates whether explicitly encoding comorbidity
 structure into the output architecture provides a consistent advantage over a
-well-matched multi-task baseline. Four interaction mechanisms were evaluated,
+well-matched multi-task baseline. Six output-head designs were evaluated in T2D, and four in MI,
 each encoding a different structural assumption about how outcomes relate.
 
 **Key finding:** The symmetric Conditional Random Field (CRF), which assumes
@@ -29,14 +29,16 @@ data fraction tested — using only 3 learnable parameters.
 - VF: Ventricular Fibrillation
 - AV Block: Atrioventricular Block
 
-## Interaction Mechanisms Tested
+## Output-Head Designs Tested
 
-| # | Mechanism | Extra Parameters | Structural Assumption |
-|---|-----------|-----------------|----------------------|
-| 1 | Linear Additive | 6 | Fixed additive influence |
-| 2 | Multiplicative | 6 | Synergistic scaling |
-| 3 | CRF (Symmetric) | 3 | Undirected co-occurrence |
-| 4 | Residual MLP | 123 | Unconstrained (upper bound) |
+| Mechanism | Extra Parameters | Structural Assumption | Evaluated In |
+|-----------|------------------|-----------------------|--------------|
+| Independent Baseline | 0 | Conditionally independent | T2D & MI |
+| Linear Additive | 6 | Fixed additive influence | T2D & MI |
+| Multiplicative | 6 | Synergistic scaling | T2D & MI |
+| CRF (Symmetric) | 3 | Undirected co-occurrence | T2D & MI |
+| Residual MLP | 123 | Unconstrained (upper bound) | T2D Only |
+| Combined Additive-Multiplicative | 12 | Additive + Synergistic scaling | T2D Only |
 
 ## Repository Structure
 ```text
